@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#438E7C"
+    tools:context=".ContactsActivity">
+
+    <TextView
+        android:id="@+id/textViewContacts"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center|center_horizontal"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="КОНТАКТЫ"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonContacts"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="57dp"
+        android:background="#00FFFFFF"
+        android:onClick="pageHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icons8_home_96_2"
+        app:tint="#294A42"
+        android:contentDescription="buttonHome" />
+
+    <LinearLayout
+        android:id="@+id/contactsListLayout"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="33dp"
+        android:contentDescription="contactsList"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonAddContact"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewContacts"
+            android:layout_width="match_parent"
+            android:layout_height="297dp" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButtonAddContact"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="57dp"
+        android:layout_marginBottom="200dp"
+        android:background="#00FFFFFF"
+        android:onClick="addContact"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/icons8_plus_48_1"
+        android:contentDescription="buttonAddContact" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

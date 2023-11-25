@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#438E7C"
+    tools:context=".ContactDeleteActivity">
+
+    <TextView
+        android:id="@+id/textViewContacts"
+        android:layout_width="298dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center|center_horizontal"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="КОНТАКТЫ"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonContacts"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="57dp"
+        android:background="#00FFFFFF"
+        android:onClick="pageHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icons8_home_96_2"
+        app:tint="#294A42"
+        android:contentDescription="buttonHome" />
+
+    <ImageButton
+        android:id="@+id/imageButtonBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="12dp"
+        android:background="#00FFFFFF"
+        android:onClick="pageContactDetail"
+        app:layout_constraintBottom_toTopOf="@+id/textViewQuestion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/icons8_backspace_96_2"
+        android:contentDescription="contactDetail" />
+
+    <TextView
+        android:id="@+id/textViewQuestion"
+        android:layout_width="298dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="17dp"
+        android:text="УДАЛИТЬ КОНТАКТ?"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewName"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewQuestion"
+        app:srcCompat="@drawable/icons8_male_user_96_2" />
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="56dp"
+        android:textAlignment="viewEnd"
+        app:layout_constraintBottom_toTopOf="@+id/textViewSurname"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewSurname"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="56dp"
+        android:textAlignment="viewEnd"
+        app:layout_constraintBottom_toTopOf="@+id/textViewPhone"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/icons8_phone_48_1" />
+
+    <TextView
+        android:id="@+id/textViewPhone"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="88dp"
+        android:textAlignment="viewEnd"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonDetail"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonDelete"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="189dp"
+        android:background="#00FFFFFF"
+        android:onClick="confirmDeleteContact"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/icons8_confirm_96_2"
+        android:contentDescription="deleteContact" />
+
+    <ImageButton
+        android:id="@+id/imageButtonDetail"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="188dp"
+        android:background="#00FFFFFF"
+        android:onClick="pageContactDetail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonDelete"
+        app:srcCompat="@drawable/icons8_cancel_48_1"
+        android:contentDescription="contactDetail" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
